@@ -69,12 +69,25 @@ print(paste("El total de empresas peruanas son:",peru,"integradas por",g_peru,"g
 }
 
 
-
-
 #Pais con mayor de ingresos por explotacion
 
-ingr_explotacion <- "max_explota"
-if()
+max <- "max_pais_expl"
+if(max == "max_pais_expl"){
+
+}
 
 #Reemplazar exportaciones
+
+
+
+#¿Cual es la participacion de las mujeres en las empresas en los 3 paises?
+
+ggplot(base, mapping = aes(x = pais, y= porcentaje_mujeres, fill=pais))+
+  geom_boxplot()+
+  theme_bw()
+
+
+
+
+
 
