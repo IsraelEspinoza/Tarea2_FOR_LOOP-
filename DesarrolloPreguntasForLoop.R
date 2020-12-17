@@ -14,3 +14,4 @@ Grandes_chi <-read_excel("GitHub/Grandes_chile.xlsx")
 
 ?rename
 rename(pequena_per,porcentaje_mujeres= procentaje_mujeres)
+

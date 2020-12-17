@@ -48,16 +48,33 @@ grandes_chi <- rename(grandes_chi, porcentaje_mujeres=procentaje_mujeres)
 base <- rbind(pequena_per,pequena_col,pequena_chi,micro_per,micro_col,
 micro_chi,medianas_per,medianas_col,medianas_chi,grandes_per,grandes_col, grandes_chi)
 
-
+#Tipo de datos
 str(base)
 
+#Observaciones Chile vs Peru
+obs <- "peru_chile"
+if(obs =="peru_chile"){
+peru <- nrow(base %>% filter(pais=="peru"))
+g_peru <- nrow(base %>% filter(pais=="peru")%>%filter(tamanio=="grande"))
+me_peru <- nrow(base %>% filter(pais=="peru")%>%filter(tamanio=="mediana"))
+mi_peru <- nrow(base %>% filter(pais=="peru")%>%filter(tamanio=="micro"))
+p_peru <- nrow(base %>% filter(pais=="peru")%>%filter(tamanio=="pequeña"))
+chile <- nrow(base %>% filter(pais=="chile"))
+g_chile <- nrow(base %>% filter(pais=="chile")%>%filter(tamanio=="grande"))
+me_chile <- nrow(base %>% filter(pais=="chile")%>%filter(tamanio=="mediana"))
+mi_chile <- nrow(base %>% filter(pais=="chile")%>%filter(tamanio=="micro"))
+p_chile <- nrow(base %>% filter(pais=="chile")%>%filter(tamanio=="pequeña"))
+
+print(paste("El total de empresas peruanas son:",peru,"integradas por",g_peru,"grandes,",me_peru,"medianas,",mi_peru,"micros y",p_peru,"pequeñas. En cambio, el total de empresas chilenas son:",chile,"integradas por",g_chile,"grandes,",me_chile,"medianas,",mi_chile,"micros y",p_chile,"pequeñas"))
+}
 
 
 
 
+#Pais con mayor de ingresos por explotacion
 
+ingr_explotacion <- "max_explota"
+if()
 
-
-
-
+#Reemplazar exportaciones
 
